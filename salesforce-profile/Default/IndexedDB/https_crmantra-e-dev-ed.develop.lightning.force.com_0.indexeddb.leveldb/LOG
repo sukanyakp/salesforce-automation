@@ -1,6 +1,13 @@
-2026/05/14-16:52:14.598 9d58 Reusing MANIFEST C:\Users\ajuna\OneDrive\Desktop\salesforce-automation\salesforce-profile\Default\IndexedDB\https_crmantra-e-dev-ed.develop.lightning.force.com_0.indexeddb.leveldb/MANIFEST-000001
-2026/05/14-16:52:14.599 9d58 Recovering log #98
-2026/05/14-16:52:14.608 9d58 Reusing old log C:\Users\ajuna\OneDrive\Desktop\salesforce-automation\salesforce-profile\Default\IndexedDB\https_crmantra-e-dev-ed.develop.lightning.force.com_0.indexeddb.leveldb/000098.log 
-2026/05/14-16:52:21.649 85d4 Level-0 table #106: started
-2026/05/14-16:52:21.685 85d4 Level-0 table #106: 2101856 bytes OK
-2026/05/14-16:52:21.689 85d4 Delete type=0 #98
+2026/05/14-17:25:19.096 1dfc Reusing MANIFEST C:\Users\ajuna\OneDrive\Desktop\salesforce-automation\salesforce-profile\Default\IndexedDB\https_crmantra-e-dev-ed.develop.lightning.force.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/05/14-17:25:19.097 1dfc Recovering log #105
+2026/05/14-17:25:19.100 1dfc Reusing old log C:\Users\ajuna\OneDrive\Desktop\salesforce-automation\salesforce-profile\Default\IndexedDB\https_crmantra-e-dev-ed.develop.lightning.force.com_0.indexeddb.leveldb/000105.log 
+2026/05/14-17:25:20.395 1584 Compacting 1@1 + 3@2 files
+2026/05/14-17:25:20.452 1584 Generated table #108@1: 1050 keys, 3062764 bytes
+2026/05/14-17:25:20.506 1584 Generated table #109@1: 1434 keys, 3241368 bytes
+2026/05/14-17:25:20.523 1584 Generated table #110@1: 1612 keys, 903078 bytes
+2026/05/14-17:25:20.523 1584 Compacted 1@1 + 3@2 files => 7207210 bytes
+2026/05/14-17:25:20.525 1584 compacted to: files[ 0 0 3 0 0 0 0 ]
+2026/05/14-17:25:20.526 1584 Delete type=2 #101
+2026/05/14-17:25:20.527 1584 Delete type=2 #102
+2026/05/14-17:25:20.527 1584 Delete type=2 #103
+2026/05/14-17:25:20.527 1584 Delete type=2 #106

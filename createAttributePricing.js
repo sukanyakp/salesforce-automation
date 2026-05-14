@@ -253,7 +253,7 @@ const fs = require('fs');
                 await page.waitForTimeout(10000);
                 
                 // LOG TO FILE
-                const logEntry = `[${new Date().toLocaleString()}] SUCCESS - Record ${i + 1}/200: Product: ${PRODUCT_NAME}, PSM: ${PSM_NAME}, Type: ${ADJUSTMENT_TYPE}, Value: ${ADJUSTMENT_VALUE}, Cabinet: ${cabinet}, DrawCap: ${drawCap}, CabE: ${cbeBand}\n`;
+                const logEntry = `[${new Date().toLocaleString()}] SUCCESS - Record ${count}/200: Product: ${PRODUCT}, PSM: ${PRODUCT_SELLING_MODEL}, Type: ${ADJUSTMENT_TYPE}, Value: ${ADJUSTMENT_VALUE}, Cabinet: ${cabinet}, DrawCap: ${drawCap}, CabE: ${cbeBand}\n`;
                 fs.appendFileSync('creation_log.txt', logEntry);
                 console.log('--- RECORD LOGGED TO creation_log.txt ---');
                 console.log('Iteration complete.');
