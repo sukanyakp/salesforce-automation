@@ -1,2 +1,3 @@
-2026/05/14-13:09:49.428 1edddc0 Creating DB /Users/macmini2022/salesforce-automation/salesforce-profile/Default/Extension Scripts since it was missing.
-2026/05/14-13:09:49.433 1edddc0 Reusing MANIFEST /Users/macmini2022/salesforce-automation/salesforce-profile/Default/Extension Scripts/MANIFEST-000001
+2026/05/14-15:09:50.896 96cc Reusing MANIFEST C:\Users\ajuna\OneDrive\Desktop\salesforce-automation\salesforce-profile\Default\Extension Scripts/MANIFEST-000001
+2026/05/14-15:09:50.912 96cc Recovering log #3
+2026/05/14-15:09:50.913 96cc Reusing old log C:\Users\ajuna\OneDrive\Desktop\salesforce-automation\salesforce-profile\Default\Extension Scripts/000003.log 
