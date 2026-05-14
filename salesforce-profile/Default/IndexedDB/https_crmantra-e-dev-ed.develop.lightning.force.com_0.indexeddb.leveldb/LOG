@@ -1,6 +1,6 @@
-2026/05/14-13:13:38.391 1edeb65 Creating DB /Users/macmini2022/salesforce-automation/salesforce-profile/Default/IndexedDB/https_crmantra-e-dev-ed.develop.lightning.force.com_0.indexeddb.leveldb since it was missing.
-2026/05/14-13:13:38.393 1edeb65 Reusing MANIFEST /Users/macmini2022/salesforce-automation/salesforce-profile/Default/IndexedDB/https_crmantra-e-dev-ed.develop.lightning.force.com_0.indexeddb.leveldb/MANIFEST-000001
-2026/05/14-13:13:38.843 1edeb68 Level-0 table #5: started
-2026/05/14-13:13:38.845 1edeb68 Level-0 table #5: 13004 bytes OK
-2026/05/14-13:13:38.845 1edeb68 Delete type=0 #3
-2026/05/14-13:13:38.846 1edeb65 Manual compaction at level-0 from '\x00\x09\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x0a\x00\x00\x00' @ 0 : 0; will stop at (end)
+2026/05/14-16:52:14.598 9d58 Reusing MANIFEST C:\Users\ajuna\OneDrive\Desktop\salesforce-automation\salesforce-profile\Default\IndexedDB\https_crmantra-e-dev-ed.develop.lightning.force.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/05/14-16:52:14.599 9d58 Recovering log #98
+2026/05/14-16:52:14.608 9d58 Reusing old log C:\Users\ajuna\OneDrive\Desktop\salesforce-automation\salesforce-profile\Default\IndexedDB\https_crmantra-e-dev-ed.develop.lightning.force.com_0.indexeddb.leveldb/000098.log 
+2026/05/14-16:52:21.649 85d4 Level-0 table #106: started
+2026/05/14-16:52:21.685 85d4 Level-0 table #106: 2101856 bytes OK
+2026/05/14-16:52:21.689 85d4 Delete type=0 #98

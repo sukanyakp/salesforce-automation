@@ -1,2 +1,3 @@
-2026/05/14-13:09:56.252 1edddc3 Creating DB /Users/macmini2022/salesforce-automation/salesforce-profile/Default/GCM Store since it was missing.
-2026/05/14-13:09:56.260 1edddc3 Reusing MANIFEST /Users/macmini2022/salesforce-automation/salesforce-profile/Default/GCM Store/MANIFEST-000001
+2026/05/14-16:43:10.985 9d10 Reusing MANIFEST C:\Users\ajuna\OneDrive\Desktop\salesforce-automation\salesforce-profile\Default\GCM Store/MANIFEST-000001
+2026/05/14-16:43:10.986 9d10 Recovering log #3
+2026/05/14-16:43:10.987 9d10 Reusing old log C:\Users\ajuna\OneDrive\Desktop\salesforce-automation\salesforce-profile\Default\GCM Store/000003.log 
