@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { chromium } = require('playwright');
 const fs = require('fs');
 
@@ -6,7 +7,9 @@ const fs = require('fs');
     const URL =
         'https://crmantra-e-dev-ed.develop.lightning.force.com/lightning/r/PriceAdjustmentSchedule/84Xbm000000ClmLEAS/view';
 
-    const PRODUCT = 'Shared Cage';
+    const PRODUCT = process.argv[2] || 'Shared Cage';
+    const PROFILE_ID = process.argv[3] || 'default';
+    const PROFILE_DIR = `./salesforce-profile-${PROFILE_ID}`;
     const PRODUCT_SELLING_MODEL = 'Term Based - Monthly';
     const ADJUSTMENT_TYPE = 'Percentage';
     const ADJUSTMENT_VALUE = '10';
@@ -42,7 +45,7 @@ const fs = require('fs');
     ];
 
     const context = await chromium.launchPersistentContext(
-        './salesforce-profile',
+        PROFILE_DIR,
         {
             headless: false,
             slowMo: 100
@@ -55,14 +58,33 @@ const fs = require('fs');
 
     await page.goto(URL);
 
-    console.log('\nLOGIN TO SALESFORCE');
-    console.log('After login press ENTER in terminal...\n');
+    console.log(`\n[Profile ${PROFILE_ID}] Checking Salesforce authentication...`);
+    while (true) {
+        const isRelated = await page.locator('a:has-text("Related")').first().isVisible();
+        if (isRelated) {
+            console.log(`[Profile ${PROFILE_ID}] Successfully loaded target page!`);
+            break;
+        }
+        
+        // Auto-login if we are on the login page and credentials are provided
+        const isLoginForm = await page.locator('#username').isVisible();
+        if (isLoginForm) {
+            if (process.env.SF_USERNAME && process.env.SF_PASSWORD) {
+                console.log(`[Profile ${PROFILE_ID}] Login page detected. Auto-filling credentials...`);
+                await page.fill('#username', process.env.SF_USERNAME);
+                await page.fill('#password', process.env.SF_PASSWORD);
+                await page.click('#Login');
+                console.log(`[Profile ${PROFILE_ID}] Submitted login credentials! Waiting for authentication...`);
+                await page.waitForTimeout(5000); // Give it time to log in
+                continue; // Re-check the loop
+            } else {
+                console.log(`[Profile ${PROFILE_ID}] Login page detected, but .env is missing credentials! Please log in manually.`);
+            }
+        }
 
-    process.stdin.resume();
-
-    await new Promise(resolve => {
-        process.stdin.once('data', resolve);
-    });
+        console.log(`[Profile ${PROFILE_ID}] Waiting for Salesforce page to load...`);
+        await page.waitForTimeout(5000);
+    }
 
     // Ensure we are on the Related tab
     const relatedTab = page.locator('a:has-text("Related")');

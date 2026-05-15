@@ -1,0 +1,6 @@
+2026/05/15-10:31:15.104 1fff67e Reusing MANIFEST /Users/macmini2022/Desktop/salesforce-automation/salesforce-profile-3/Default/IndexedDB/https_crmantra-e-dev-ed.develop.lightning.force.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/05/15-10:31:15.104 1fff67e Recovering log #4
+2026/05/15-10:31:15.107 1fff67e Reusing old log /Users/macmini2022/Desktop/salesforce-automation/salesforce-profile-3/Default/IndexedDB/https_crmantra-e-dev-ed.develop.lightning.force.com_0.indexeddb.leveldb/000004.log 
+2026/05/15-10:31:19.311 1fff67c Level-0 table #8: started
+2026/05/15-10:31:19.321 1fff67c Level-0 table #8: 1850930 bytes OK
+2026/05/15-10:31:19.323 1fff67c Delete type=0 #4

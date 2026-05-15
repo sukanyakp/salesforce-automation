@@ -1,0 +1,98 @@
+Half Cage
+Quarter Cage
+Full Cage
+Modular Cage
+Custom Cage
+Enterprise Cage
+Hyperscale Cage
+Colocation Cage
+Secure Cage
+Biometric Cage
+Multi-Tenant Cage
+Single-Tenant Cage
+Dedicated Cage
+Open Cage
+Locked Cage
+Mesh Cage
+Steel Cage
+Aluminum Cage
+Welded Wire Cage
+Expanded Metal Cage
+Perforated Panel Cage
+Glass Wall Cage
+Acrylic Panel Cage
+Tempered Glass Cage
+Fire-Rated Cage
+EMI-Shielded Cage
+Faraday Cage
+RF-Shielded Cage
+Soundproof Cage
+Acoustic Cage
+Climate-Controlled Cage
+Cold Aisle Cage
+Hot Aisle Cage
+Contained Aisle Cage
+Pressurized Cage
+Raised Floor Cage
+Under-Floor Cage
+Overhead Cable Cage
+High-Density Cage
+Low-Density Cage
+Ultra-High-Density Cage
+Power-Ready Cage
+Dual-Power Cage
+Redundant Power Cage
+Generator-Backed Cage
+UPS-Integrated Cage
+Solar-Powered Cage
+Edge Cage
+Micro Cage
+Nano Cage
+Portable Cage
+Mobile Cage
+Prefab Cage
+Prefabricated Modular Cage
+Expandable Cage
+Scalable Cage
+Stackable Cage
+Floor-Mounted Cage
+Wall-Mounted Cage
+Freestanding Cage
+Suspended Cage
+Overhead Cage
+Perimeter Cage
+Compliance Cage
+HIPAA Cage
+PCI-DSS Cage
+SOC 2 Cage
+ISO-Certified Cage
+Government Cage
+Military-Grade Cage
+SCIF Cage
+Classified Cage
+Tier I Cage
+Tier II Cage
+Tier III Cage
+Tier IV Cage
+Carrier-Neutral Cage
+Network-Dense Cage
+Cross-Connect Cage
+Meet-Me Cage
+Interconnect Cage
+Dark Fiber Cage
+Optical Cage
+Storage Cage
+Compute Cage
+GPU Cage
+AI/ML Cage
+HPC Cage (High Performance Computing)
+Blockchain Cage
+Crypto Mining Cage
+Disaster Recovery Cage
+Backup Cage
+Hybrid Cloud Cage
+Multi-Cloud Cage
+Bare Metal Cage
+Virtualization Cage
+Smart Cage
+Ultra-Secure Cage
