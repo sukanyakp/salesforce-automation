@@ -4,7 +4,7 @@
 
 > **Effortlessly automate the creation of complex pricing adjustments in Salesforce.**
 
-This script automates the tedious process of creating **200 unique combinations** of Attribute Based Adjustments in Salesforce, handling modal navigation, dropdown selections, and calendar pickers.
+This automation suite creates complex **Attribute Based Adjustments** in Salesforce, handling modal navigation, dropdown selections, and calendar pickers. It has been supercharged to process massive volumes (like 100 products × 200 combinations = 20,000 records) using parallel processing.
 
 ---
 
@@ -26,37 +26,51 @@ npx playwright install chromium
 
 ### 3. Configuration
 
-Open `createAttributePricing.js` and update the following constants if needed:
+1. **Credentials:** 
+   Open the `.env` file and enter your Salesforce credentials. The scripts use this to automatically log you in without requiring manual intervention.
+   ```env
+   SF_USERNAME=your_username@salesforce.com
+   SF_PASSWORD=your_password
+   ```
 
-- `URL`: The Salesforce Price Adjustment Schedule view URL.
-- `PRODUCT`, `PRODUCT_SELLING_MODEL`, etc.
+2. **Products List:**
+   Open `products.txt` and ensure all the products you want to process are listed, one per line.
 
 ---
 
 ## 🛠️ Usage
 
-1. **Run the script:**
+You have two ways to generate records. The **CSV Method** is highly recommended for speed.
 
+### Method A: Parallel UI Automation Orchestrator
+
+This method opens 5 Chrome windows simultaneously and distributes the products from `products.txt` across them.
+
+1. **Run the orchestrator:**
    ```bash
-   node createAttributePricing.js
+   node orchestrator.js
    ```
+2. **Auto-Login:** 
+   The browsers will launch, detect the login screen, and automatically fill in your `.env` credentials.
+3. **Smart Resume:** 
+   If you ever need to stop the script (Ctrl+C), just run it again! The script reads all `creation_log_*.txt` files and automatically skips any product combination that was already successfully completed.
 
-2. **Login:**
-   A browser window will open. Log in to your Salesforce account manually.
+### Method B: CSV Generation (Lightning Fast ⚡)
 
-3. **Authorize:**
-   Once logged in, go back to your terminal and **press ENTER**.
+UI automation takes about ~1 minute per record. If you have 20,000 records, it will take days even with parallel processing. Use this method to create them in 2 minutes.
 
-4. **Automation Flow:**
-   The script will iterate through all 200 combinations.
-   - It **automatically clicks "New"** in the Attribute Based Adjustment section for each record.
-   - The script fills both Page 1 (Product info) and Page 2 (Attribute values) automatically.
+1. **Run the generator:**
+   ```bash
+   node generateCSV.js
+   ```
+2. **Import:**
+   A file named `AttributeBasedAdjustments.csv` will be instantly created with all 20,000 rows perfectly formatted. Use **Salesforce Data Loader** or **Data Import Wizard** to upload it.
 
 ---
 
 ## 📊 Combinations Logic
 
-The script iterates through the following attributes to generate 200 records:
+The scripts iterate through the following attributes for every single product:
 
 | Attribute              | Values                                |
 | :--------------------- | :------------------------------------ |
@@ -64,37 +78,29 @@ The script iterates through the following attributes to generate 200 records:
 | **Draw Caps**          | 3 kVA, 4 kVA, 5 kVA, 6 kVA, 7 kVA     |
 | **CBE Bands**          | 2 – 3, 3 – 4, 4 – 5, 5 – 6, 6 – 7     |
 
-**Total:** 8 × 5 × 5 = **200 Records**
+**Total per Product:** 8 × 5 × 5 = **200 Records**
 
 ---
 
 ## 📝 Logging
 
-All successful creations are logged in real-time to:
-`creation_log.txt`
+To prevent file-writing conflicts, each parallel worker writes to its own log file:
+- `creation_log_1.txt`
+- `creation_log_2.txt`
+- etc.
 
 Example:
-`[14/5/2026, 5:26:42 pm] SUCCESS - Record 1/200: Product: Shared Cage, PSM: Term Based - Monthly...`
-
-## ⏱️ Performance & Efficiency
-
-Based on real-time execution logs, the automation achieves significant time savings:
-
-- **Average Time per Record:** ~1 Minute 8 Seconds
-- **Total Records:** 200
-- **Total Automation Time:** ~3.8 Hours
-- **Estimated Manual Time:** ~16.5 Hours (at 5 mins/record)
-- **Efficiency Gain:** **>75% Time Saved** 🚀
-
-The script allows for hands-free creation of complex pricing grids, ensuring 100% data accuracy across all 200 combinations.
+`[5/15/2026, 10:26:42 AM] SUCCESS - Record 1/200: Product: Shared Cage, PSM: Term Based - Monthly...`
 
 ---
 
 ## 🛡️ Features
 
-- **Persistent Context:** Saves your login session in `./salesforce-profile` so you don't have to log in every time.
+- **Parallel Orchestration:** Run 5 browsers at once.
+- **Auto-Login:** Automatically bypasses Salesforce login using `.env`.
+- **Smart Queue & Resumption:** Reads all log files and skips any work that was already done, making it 100% safe to stop and restart.
+- **Persistent Context:** Saves your login session in `./salesforce-profile-X` folders.
 - **Dynamic Selectors:** Specifically built to handle Salesforce's complex Lightning UI.
-- **Auto-Wait:** Intelligent wait times to handle Salesforce server processing.
 
 ---
 

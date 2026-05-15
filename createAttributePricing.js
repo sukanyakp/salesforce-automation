@@ -96,8 +96,9 @@ const fs = require('fs');
 
     let completedSet = new Set();
     try {
-        if (fs.existsSync('creation_log.txt')) {
-            const logContent = fs.readFileSync('creation_log.txt', 'utf8');
+        const logFiles = fs.readdirSync('.').filter(f => f.startsWith('creation_log') && f.endsWith('.txt'));
+        for (const file of logFiles) {
+            const logContent = fs.readFileSync(file, 'utf8');
             const lines = logContent.split('\n');
             for (const line of lines) {
                 if (line.includes('SUCCESS') && line.includes(`Product: ${PRODUCT}`) && line.includes(`PSM: ${PRODUCT_SELLING_MODEL}`)) {
@@ -107,10 +108,10 @@ const fs = require('fs');
                     }
                 }
             }
-            console.log(`Found ${completedSet.size} previously completed combinations in log for this product.`);
         }
+        console.log(`[Profile ${PROFILE_ID}] Found ${completedSet.size} previously completed combinations across all logs for this product.`);
     } catch (e) {
-        console.log('Could not read creation_log.txt, starting fresh.');
+        console.log(`[Profile ${PROFILE_ID}] Error reading log files, starting fresh.`);
     }
 
     let count = 0;
@@ -334,9 +335,10 @@ const fs = require('fs');
                 await page.waitForTimeout(10000);
                 
                 // LOG TO FILE
+                const logFileName = `creation_log_${PROFILE_ID}.txt`;
                 const logEntry = `[${new Date().toLocaleString()}] SUCCESS - Record ${count}/200: Product: ${PRODUCT}, PSM: ${PRODUCT_SELLING_MODEL}, Type: ${ADJUSTMENT_TYPE}, Value: ${ADJUSTMENT_VALUE}, Cabinet: ${cabinet}, DrawCap: ${drawCap}, CabE: ${cbeBand}\n`;
-                fs.appendFileSync('creation_log.txt', logEntry);
-                console.log('--- RECORD LOGGED TO creation_log.txt ---');
+                fs.appendFileSync(logFileName, logEntry);
+                console.log(`--- RECORD LOGGED TO ${logFileName} ---`);
                 console.log('Iteration complete.');
 
             }
