@@ -72,6 +72,25 @@ const fs = require('fs');
         await page.waitForTimeout(5000);
     }
 
+    let completedSet = new Set();
+    try {
+        if (fs.existsSync('creation_log.txt')) {
+            const logContent = fs.readFileSync('creation_log.txt', 'utf8');
+            const lines = logContent.split('\n');
+            for (const line of lines) {
+                if (line.includes('SUCCESS') && line.includes(`Product: ${PRODUCT}`) && line.includes(`PSM: ${PRODUCT_SELLING_MODEL}`)) {
+                    const match = line.match(/Cabinet: (.*?), DrawCap: (.*?), CabE: (.*?)$/);
+                    if (match) {
+                        completedSet.add(`${match[1]}|${match[2]}|${match[3]}`);
+                    }
+                }
+            }
+            console.log(`Found ${completedSet.size} previously completed combinations in log for this product.`);
+        }
+    } catch (e) {
+        console.log('Could not read creation_log.txt, starting fresh.');
+    }
+
     let count = 0;
 
     for (const cabinet of maxNoOfCabinets) {
@@ -81,6 +100,11 @@ const fs = require('fs');
             for (const cbeBand of cbeBands) {
 
                 count++;
+
+                const signature = `${cabinet}|${drawCap}|${cbeBand}`;
+                if (completedSet.has(signature)) {
+                    continue;
+                }
 
                 console.log(`\n[${count}/200] Automating "New" button click for Attribute Based Adjustment...`);
                 
