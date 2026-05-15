@@ -1,9 +1,30 @@
-2026/05/15-10:57:16.433 2004641 Reusing MANIFEST /Users/macmini2022/Desktop/salesforce-automation/salesforce-profile-4/Default/IndexedDB/https_crmantra-e-dev-ed.develop.lightning.force.com_0.indexeddb.leveldb/MANIFEST-000001
-2026/05/15-10:57:16.433 2004641 Recovering log #7
-2026/05/15-10:57:16.434 2004641 Reusing old log /Users/macmini2022/Desktop/salesforce-automation/salesforce-profile-4/Default/IndexedDB/https_crmantra-e-dev-ed.develop.lightning.force.com_0.indexeddb.leveldb/000007.log 
-2026/05/15-10:57:17.844 2004648 Compacting 1@1 + 1@2 files
-2026/05/15-10:57:17.854 2004648 Generated table #10@1: 510 keys, 936052 bytes
-2026/05/15-10:57:17.854 2004648 Compacted 1@1 + 1@2 files => 936052 bytes
-2026/05/15-10:57:17.855 2004648 compacted to: files[ 0 0 1 0 0 0 0 ]
-2026/05/15-10:57:17.855 2004648 Delete type=2 #5
-2026/05/15-10:57:17.855 2004648 Delete type=2 #8
+2026/05/15-18:11:16.495 209403e Reusing MANIFEST /Users/macmini2022/Desktop/salesforce-automation/salesforce-profile-4/Default/IndexedDB/https_crmantra-e-dev-ed.develop.lightning.force.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/05/15-18:11:16.495 209403e Recovering log #32
+2026/05/15-18:11:16.511 209403e Reusing old log /Users/macmini2022/Desktop/salesforce-automation/salesforce-profile-4/Default/IndexedDB/https_crmantra-e-dev-ed.develop.lightning.force.com_0.indexeddb.leveldb/000032.log 
+2026/05/15-18:11:21.576 209403e Level-0 table #37: started
+2026/05/15-18:11:21.585 209403e Level-0 table #37: 1619461 bytes OK
+2026/05/15-18:11:21.587 209403e Delete type=0 #32
+2026/05/15-18:13:34.828 209403e Compacting 1@1 + 1@2 files
+2026/05/15-18:13:34.851 209403e Generated table #38@1: 8022 keys, 1852925 bytes
+2026/05/15-18:13:34.851 209403e Compacted 1@1 + 1@2 files => 1852925 bytes
+2026/05/15-18:13:34.852 209403e compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/05/15-18:13:34.852 209403e Delete type=2 #34
+2026/05/15-18:13:34.852 209403e Delete type=2 #37
+2026/05/15-18:50:53.497 2094053 Level-0 table #40: started
+2026/05/15-18:50:53.504 2094053 Level-0 table #40: 1235964 bytes OK
+2026/05/15-18:50:53.506 2094053 Delete type=0 #36
+2026/05/15-18:54:13.966 209403e Compacting 1@1 + 1@2 files
+2026/05/15-18:54:13.991 209403e Generated table #41@1: 8817 keys, 1523339 bytes
+2026/05/15-18:54:13.991 209403e Compacted 1@1 + 1@2 files => 1523339 bytes
+2026/05/15-18:54:13.993 209403e compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/05/15-18:54:13.993 209403e Delete type=2 #38
+2026/05/15-18:54:13.993 209403e Delete type=2 #40
+2026/05/15-19:54:08.999 209403e Level-0 table #43: started
+2026/05/15-19:54:09.011 209403e Level-0 table #43: 765224 bytes OK
+2026/05/15-19:54:09.013 209403e Delete type=0 #39
+2026/05/15-19:57:24.084 209403c Compacting 1@1 + 1@2 files
+2026/05/15-19:57:24.105 209403c Generated table #44@1: 10149 keys, 1577294 bytes
+2026/05/15-19:57:24.105 209403c Compacted 1@1 + 1@2 files => 1577294 bytes
+2026/05/15-19:57:24.107 209403c compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/05/15-19:57:24.107 209403c Delete type=2 #43
+2026/05/15-19:57:24.107 209403c Delete type=2 #41

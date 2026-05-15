@@ -1,0 +1,12 @@
+2026/05/15-18:07:11.091 2091d9f Reusing MANIFEST /Users/macmini2022/Desktop/salesforce-automation/salesforce-profile-1/Default/IndexedDB/https_crmantra-e-dev-ed.develop.lightning.force.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/05/15-18:07:11.092 2091d9f Recovering log #23
+2026/05/15-18:07:11.097 2091d9f Reusing old log /Users/macmini2022/Desktop/salesforce-automation/salesforce-profile-1/Default/IndexedDB/https_crmantra-e-dev-ed.develop.lightning.force.com_0.indexeddb.leveldb/000023.log 
+2026/05/15-18:07:17.512 2091d9d Level-0 table #28: started
+2026/05/15-18:07:17.522 2091d9d Level-0 table #28: 2008612 bytes OK
+2026/05/15-18:07:17.523 2091d9d Delete type=0 #23
+2026/05/15-18:10:46.038 2091d9d Compacting 1@1 + 1@2 files
+2026/05/15-18:10:46.050 2091d9d Generated table #29@1: 896 keys, 1212807 bytes
+2026/05/15-18:10:46.050 2091d9d Compacted 1@1 + 1@2 files => 1212807 bytes
+2026/05/15-18:10:46.051 2091d9d compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/05/15-18:10:46.051 2091d9d Delete type=2 #28
+2026/05/15-18:10:46.051 2091d9d Delete type=2 #25

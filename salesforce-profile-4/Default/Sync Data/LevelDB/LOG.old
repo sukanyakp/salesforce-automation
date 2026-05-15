@@ -1,3 +1,3 @@
-2026/05/15-10:31:15.490 1fff77b Reusing MANIFEST /Users/macmini2022/Desktop/salesforce-automation/salesforce-profile-4/Default/Sync Data/LevelDB/MANIFEST-000001
-2026/05/15-10:31:15.490 1fff77b Recovering log #3
-2026/05/15-10:31:15.490 1fff77b Reusing old log /Users/macmini2022/Desktop/salesforce-automation/salesforce-profile-4/Default/Sync Data/LevelDB/000003.log 
+2026/05/15-18:07:15.919 2092102 Reusing MANIFEST /Users/macmini2022/Desktop/salesforce-automation/salesforce-profile-4/Default/Sync Data/LevelDB/MANIFEST-000001
+2026/05/15-18:07:15.924 2092102 Recovering log #3
+2026/05/15-18:07:15.925 2092102 Reusing old log /Users/macmini2022/Desktop/salesforce-automation/salesforce-profile-4/Default/Sync Data/LevelDB/000003.log 

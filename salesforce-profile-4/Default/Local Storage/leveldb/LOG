@@ -1,3 +1,6 @@
-2026/05/15-10:57:15.494 200468d Reusing MANIFEST /Users/macmini2022/Desktop/salesforce-automation/salesforce-profile-4/Default/Local Storage/leveldb/MANIFEST-000001
-2026/05/15-10:57:15.497 200468d Recovering log #3
-2026/05/15-10:57:15.498 200468d Reusing old log /Users/macmini2022/Desktop/salesforce-automation/salesforce-profile-4/Default/Local Storage/leveldb/000003.log 
+2026/05/15-18:11:10.235 2094092 Reusing MANIFEST /Users/macmini2022/Desktop/salesforce-automation/salesforce-profile-4/Default/Local Storage/leveldb/MANIFEST-000001
+2026/05/15-18:11:10.239 2094092 Recovering log #7
+2026/05/15-18:11:10.240 2094092 Reusing old log /Users/macmini2022/Desktop/salesforce-automation/salesforce-profile-4/Default/Local Storage/leveldb/000007.log 
+2026/05/15-18:29:16.456 2094095 Level-0 table #11: started
+2026/05/15-18:29:16.460 2094095 Level-0 table #11: 10695 bytes OK
+2026/05/15-18:29:16.463 2094095 Delete type=0 #7
